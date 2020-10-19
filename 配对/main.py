@@ -5,6 +5,22 @@ import json
 from __future__ import print_function
 import copy
 
+
+def rejs():
+    body = {
+    "teamid":xx,
+    "token":"xxxxx"
+    }
+    headers = {'content-type':"application/json"}
+    response = requests.request("post",url,headers=headers,json=body)
+    dic=response.json()
+    data=dic['data']
+    uuid=dic['uuid']
+    img=data['img']
+    stepre=data['step']
+    swap=data['swap']
+    image_data = base64.b64decode(img) 
+	
 def splitmage(src):
 
     img = Image.open(src)
